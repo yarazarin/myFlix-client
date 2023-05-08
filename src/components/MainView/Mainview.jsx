@@ -65,6 +65,7 @@ const MainView = () => {
 
   return (
       <div>
+        <div className="main__title">myFlix</div>
         {movies.map((movie) => (
           <MovieCard
             key={movie.id}

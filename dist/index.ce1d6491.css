@@ -2,6 +2,22 @@
   color: #4682b4;
 }
 
+.main__title {
+  min-width: 300px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #b446ad;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 8px;
+  font-family: Papyrus;
+  font-size: 5rem;
+  display: block;
+}
+
+.main__title:hover {
+  background-color: #4682b4;
+}
+
 .movie__card, .back-to {
   color: #fff;
   cursor: pointer;
@@ -14,7 +30,7 @@
 }
 
 .movie__card:hover, .back-to:hover {
-  background-color: #b44646;
+  background-color: #5ab446;
 }
 
 .movie__view {
