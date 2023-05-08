@@ -2,4 +2,25 @@
   color: #4682b4;
 }
 
+.movie__card, .back-to {
+  color: #fff;
+  cursor: pointer;
+  min-width: 300px;
+  background-color: #4682b4;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  transition: all .2s ease-in-out;
+}
+
+.movie__card:hover, .back-to:hover {
+  background-color: #b44646;
+}
+
+.movie__view {
+  max-width: 300px;
+  background-color: #ffe4e4;
+  display: block;
+}
+
 /*# sourceMappingURL=index.ce1d6491.css.map */
