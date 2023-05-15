@@ -1,52 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieView from "../MovieView/MovieView";
+import PropTypes from 'prop-types';
 
 const MainView = () => {
-  const [movies, setMovies] = useState(
-    [
-      {
-        id: 1,
-        title: "The Enchanted Voyage",
-        director: "John Smith",
-        image: "https://picsum.photos/300/300?random=1",
-        description: "Magical journey with unexpected wonders",
-        genre: "Fantasy",
-      },
-      {
-        id: 2,
-        title: "Rise of the Shadows",
-        director: "Emily Johnson",
-        image: "https://picsum.photos/300/300?random=2",
-        description: "Battle against impending darkness",
-        genre: "Action",
-      },
-      {
-        id: 3,
-        title: "Lost in Time",
-        director: "Michael Anderson",
-        image: "https://picsum.photos/300/300?random=3",
-        description: "Time-travel adventure with unforeseen consequences",
-        genre: "Sci-Fi",
-      },
-      {
-        id: 4,
-        title: "The Forgotten Kingdom",
-        director: "Sarah Williams",
-        image: "https://picsum.photos/300/300?random=4",
-        description: "Uncover the secrets of a long-lost kingdom",
-        genre: "Adventure",
-      },
-      {
-        id: 5,
-        title: "Echoes of Destiny",
-        director: "Robert Thompson",
-        image: "https://picsum.photos/300/300?random=5",
-        description: "Fate intertwined in a mesmerizing tale",
-        genre: "Drama",
-      },
-    ],
-  );
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetch("https://evening-inlet-09970.herokuapp.com/movies")
+      .then((respounse) => respounse.json())
+      .then((data) => {
+        const moviesFromAPI = data.map((movie) => {
+          const { _id, Title, Director, imagePath, Description, Genre } = movie;
+          return {
+            id: _id,
+            title: Title,
+            director: Director.name,
+            image: imagePath,
+            description: Description,
+            genre: Genre.name,
+          };
+        });
+        setMovies(moviesFromAPI);
+      });
+  }, []);
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
@@ -64,19 +41,105 @@ const MainView = () => {
   }
 
   return (
-      <div>
-        <div className="main__title">myFlix</div>
-        {movies.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            movie={movie}
-            onMovieClick={(newSelectedMovie) => {
-              setSelectedMovie(newSelectedMovie);
-            }}
-          />
-        ))}
-      </div>
+    <div className="container_main">
+      <div className="main__title">myFlix</div>
+      {movies.map((movie) => (
+        <MovieCard
+          key={movie.id}
+          movie={movie}
+          onMovieClick={(newSelectedMovie) => {
+            setSelectedMovie(newSelectedMovie);
+          }}
+        />
+      ))}
+    </div>
   );
 };
 
+MainView.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      director: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      genre: PropTypes.string.isRequired,
+    })
+  ),
+};
+
 export default MainView;
+
+
+
+
+// import { useState, useEffect } from "react";
+// import PropTypes from "prop-types";
+// import MovieCard from "../MovieCard/MovieCard";
+// import MovieView from "../MovieView/MovieView";
+
+// const MainView = () => {
+//   const [movies, setMovies] = useState([]);
+//   const [selectedMovie, setSelectedMovie] = useState(null);
+
+//   useEffect(() => {
+//     fetch("https://evening-inlet-09970.herokuapp.com/movies")
+//       .then((response) => response.json())
+//       .then((data) => {
+//         const moviesFromAPI = data.map((movie) => ({
+//           id: movie._id,
+//           title: movie.Title,
+//           director: movie.Director.name,
+//           image: movie.imagePath,
+//           description: movie.Description,
+//           genre: movie.Genre.name,
+//         }));
+//         setMovies(moviesFromAPI);
+//       });
+//   }, []);
+
+//   const handleMovieClick = (newSelectedMovie) => {
+//     setSelectedMovie(newSelectedMovie);
+//   };
+
+//   const handleBackClick = () => {
+//     setSelectedMovie(null);
+//   };
+
+//   if (selectedMovie) {
+//     return <MovieView movie={selectedMovie} onBackClick={handleBackClick} />;
+//   }
+
+//   if (movies.length === 0) {
+//     return <div>Empty!</div>;
+//   }
+
+//   return (
+//     <div>
+//       <div className="main__title">myFlix</div>
+//       {movies.map((movie) => (
+//         <MovieCard
+//           key={movie.id}
+//           movie={movie}
+//           onMovieClick={handleMovieClick}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+
+// MainView.propTypes = {
+//   movies: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//       title: PropTypes.string.isRequired,
+//       director: PropTypes.string.isRequired,
+//       image: PropTypes.string.isRequired,
+//       description: PropTypes.string,
+//       genre: PropTypes.string.isRequired,
+//     })
+//   ),
+// };
+
+// export default MainView;

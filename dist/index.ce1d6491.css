@@ -2,6 +2,14 @@
   color: #4682b4;
 }
 
+.container_main {
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .main__title {
   min-width: 300px;
   max-width: 300px;
@@ -22,6 +30,7 @@
   color: #fff;
   cursor: pointer;
   min-width: 300px;
+  max-width: 300px;
   background-color: #4682b4;
   border-radius: .5rem;
   padding: .5rem 1rem;
@@ -34,9 +43,11 @@
 }
 
 .movie__view {
-  max-width: 300px;
-  background-color: #ffe4e4;
-  display: block;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.ce1d6491.css.map */

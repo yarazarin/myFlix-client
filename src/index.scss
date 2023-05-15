@@ -7,6 +7,13 @@ $color4: rgb(180, 70, 173);
   color: $color;
 }
 
+.container_main {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .main__title{
   font-size: 5rem;
   font-family: Papyrus;
@@ -30,6 +37,7 @@ $color4: rgb(180, 70, 173);
   border-radius: 0.5rem;
   cursor: pointer;
   min-width: 300px;
+  max-width: 300px;
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -38,7 +46,9 @@ $color4: rgb(180, 70, 173);
 }
 
 .movie__view {
-  display: block;
-  max-width: 300px;
-  background-color: $color3;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
