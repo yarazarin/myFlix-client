@@ -16,3 +16,9 @@ const MovieCard = ({ movie, onMovieClick }) => {
 };
 
 export default MovieCard;
+
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+};

@@ -27,5 +27,14 @@ const MovieView = ({ movie, onBackClick }) => {
     </div>
   );
 };
-
+MovieView.propTypes = {
+  movie: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    director: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+  onBackClick: PropTypes.func.isRequired,
+};
 export default MovieView;

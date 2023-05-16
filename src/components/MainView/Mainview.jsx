@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieView from "../MovieView/MovieView";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const MainView = () => {
   const [movies, setMovies] = useState([]);
