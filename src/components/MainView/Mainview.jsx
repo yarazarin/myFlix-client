@@ -56,17 +56,4 @@ const MainView = () => {
   );
 };
 
-MainView.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      director: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      description: PropTypes.string,
-      genre: PropTypes.string.isRequired,
-    })
-  ),
-};
-
 export default MainView;
