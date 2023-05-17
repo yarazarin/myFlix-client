@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieView from "../MovieView/MovieView";
+import { LoginView } from "../LoginView/LoginView";
 
 const MainView = () => {
   const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     fetch("https://evening-inlet-09970.herokuapp.com/movies")
@@ -24,7 +27,9 @@ const MainView = () => {
       });
   }, []);
 
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  if (!user) {
+    return <LoginView onLoggedIn={(user) => setUser(user)} />;
+  }
 
   if (selectedMovie) {
     return (
