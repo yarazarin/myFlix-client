@@ -17,12 +17,11 @@ const MainView = () => {
     if (!token) {
       return;
     }
-    fetch("https://myflixmoviedb.herokuapp.com/movies", {
+    fetch("https://evening-inlet-09970.herokuapp.com/movies", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((respounse) => respounse.json())
       .then((data) => {
-
         console.log("data :", data);
         const moviesFromAPI = data.map((movie) => {
           const { _id, Title, Director, imagePath, Description, Genre } = movie;
