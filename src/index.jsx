@@ -1,9 +1,9 @@
 import { createRoot } from "react-dom/client";
 import "./index.scss";
-import MainView from "./components/MainView/Mainview";
+import MainView from "./components/MainView/MainView";
 
 const MyFlixApplication = () => {
-  return <MainView />;
+  return <MainView />
 };
 
 const container = document.querySelector("#root");
