@@ -1,4 +1,4 @@
-import "./MainView.scss"
+import "./MainView.scss";
 import { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieView from "../MovieView/MovieView";
@@ -81,7 +81,7 @@ const MainView = () => {
       ))}
       <br />
       <button
-      className="submit__btn"
+        className="submit__btn"
         onClick={() => {
           setUser(null);
           setToken(null);

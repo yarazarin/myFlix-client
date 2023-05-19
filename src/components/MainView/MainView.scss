@@ -1,6 +1,9 @@
-$btn-color: #ffffff;
-$btn-bg: #275677;
-$btn-border: #1e3a56;
+$color: #000000;
+$color0: #ffffff;
+$color1: #e056fd;
+$color2: #34e7e4;
+$color3: #ffe4e4;
+$color4: #ef5777;
 
 .log__view {
   display: block;
@@ -18,15 +21,15 @@ $btn-border: #1e3a56;
   margin-top: 10px;
   padding: 5px;
   font-size: 16px;
-  background-color: #ef5777;
-  color: white;
+  background-color: $color1;
+  color: $color0;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 1px $color;
   transition: box-shadow 0.3s;
 
   &:hover,
   &:focus {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 5px $color;
   }
 }

@@ -1,3 +1,13 @@
+$color: #000000;
+$color0: #ffffff;
+$color1: #e056fd;
+$color2: #34e7e4;
+$color3: #ffe4e4;
+$color4: #ef5777;
+$color5: #bb3cff18;
+$color6: #bb3dff18, 0, 0.2;
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -13,20 +23,20 @@ form {
     margin-bottom: 10px;
 
     input {
-      background-color: #3c97ff28;
+      background-color: $color0;
       width: 300px;
       padding: 10px;
       border: none;
       border-radius: 4px;
       margin-top: 5px;
-      font-size: .7rem;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      font-size: 0.7rem;
+      box-shadow: 0 0 5px $color6;
       transition: box-shadow 0.3s;
 
       &:hover,
       &:focus {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        background-color: #bb3cff18;
+        background-color: $color5;
       }
     }
   }
@@ -36,18 +46,16 @@ form {
     margin-top: 10px;
     padding: 5px;
     font-size: 16px;
-    background-color: #ef5777;
-    color: white;
+    background-color: $color1;
+    color: $color0;
     border: none;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 5px $color;
     transition: box-shadow 0.3s;
 
     &:hover,
     &:focus {
-      box-shadow: 0 0 5px rgb(0, 0, 0);
+      box-shadow: 0 0 5px $color;
     }
   }
 }
-
-

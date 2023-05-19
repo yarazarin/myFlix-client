@@ -1,10 +1,12 @@
-$color: #2ecc70;
+$color: #000000;
+$color0: #ffffff;
+$color1: #e056fd;
 $color2: #34e7e4;
-$color3: rgb(255, 228, 228);
+$color3: #ffe4e4;
 $color4: #ef5777;
 
 .my-flix {
-  color: $color;
+  color: $color1;
 }
 
 .container_main {
@@ -31,8 +33,8 @@ $color4: #ef5777;
 }
 .movie__card,
 .back-to {
-  background-color: $color;
-  color: white;
+  background-color: $color1;
+  color: $color0;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -43,7 +45,7 @@ $color4: #ef5777;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: $color2;
+    background-color: $color4;
   }
 }
 

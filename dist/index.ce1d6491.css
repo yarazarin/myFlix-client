@@ -1,5 +1,5 @@
 .my-flix {
-  color: #2ecc70;
+  color: #e056fd;
 }
 
 .container_main {
@@ -33,7 +33,7 @@
   min-width: 300px;
   max-width: 300px;
   min-height: 40px;
-  background-color: #2ecc70;
+  background-color: #e056fd;
   border-radius: .5rem;
   padding: .5rem 1rem;
   font-size: 1rem;
@@ -41,7 +41,7 @@
 }
 
 .movie__card:hover, .back-to:hover {
-  background-color: #34e7e4;
+  background-color: #ef5777;
 }
 
 .movie__view {
@@ -66,14 +66,14 @@
 .submit__btn {
   width: 100px;
   color: #fff;
-  background-color: #ef5777;
+  background-color: #e056fd;
   border: none;
   border-radius: 8px;
   margin-top: 10px;
   padding: 5px;
   font-size: 16px;
   transition: box-shadow .3s;
-  box-shadow: 0 0 5px #0003;
+  box-shadow: 0 0 1px #000;
 }
 
 .submit__btn:hover, .submit__btn:focus {
@@ -98,14 +98,14 @@ form label {
 
 form label input {
   width: 300px;
-  background-color: #3c97ff28;
+  box-shadow: 0 0 5px #bb3dff18, 0, .2;
+  background-color: #fff;
   border: none;
   border-radius: 4px;
   margin-top: 5px;
   padding: 10px;
   font-size: .7rem;
   transition: box-shadow .3s;
-  box-shadow: 0 0 5px #0000001a;
 }
 
 form label input:hover, form label input:focus {
@@ -116,14 +116,14 @@ form label input:hover, form label input:focus {
 form .submit__btn[type="submit"] {
   width: 100px;
   color: #fff;
-  background-color: #ef5777;
+  background-color: #e056fd;
   border: none;
   border-radius: 8px;
   margin-top: 10px;
   padding: 5px;
   font-size: 16px;
   transition: box-shadow .3s;
-  box-shadow: 0 0 5px #0003;
+  box-shadow: 0 0 5px #000;
 }
 
 form .submit__btn[type="submit"]:hover, form .submit__btn[type="submit"]:focus {
