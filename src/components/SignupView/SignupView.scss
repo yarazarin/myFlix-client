@@ -4,8 +4,8 @@ $color1: #e056fd;
 $color2: #34e7e4;
 $color3: #ffe4e4;
 $color4: #ef5777;
-$color5: #bb3cff18;
-$color6: #bb3dff18, 0, 0.2;
+$color5: #ff49d81a;
+$color6: #00000000;
 
 
 form {
@@ -23,14 +23,14 @@ form {
     margin-bottom: 10px;
 
     input {
-      background-color: $color0;
+      background-color: $color6;
       width: 300px;
       padding: 10px;
       border: none;
       border-radius: 4px;
       margin-top: 5px;
       font-size: 0.7rem;
-      box-shadow: 0 0 5px $color6;
+      box-shadow: 0 0 1px $color;
       transition: box-shadow 0.3s;
 
       &:hover,
