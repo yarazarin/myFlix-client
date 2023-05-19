@@ -1,3 +1,4 @@
+import "./MainView.scss"
 import { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieView from "../MovieView/MovieView";
@@ -11,7 +12,6 @@ const MainView = () => {
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
-
 
   useEffect(() => {
     if (!token) {
@@ -41,13 +41,16 @@ const MainView = () => {
   if (!user) {
     return (
       <>
-        <LoginView onLoggedIn={(user, token) => {
-          setUser(user);
-          setToken(token);
-        }} /> or
+        <LoginView
+          onLoggedIn={(user, token) => {
+            setUser(user);
+            setToken(token);
+          }}
+        />
+        <h3>Or Signup!</h3>
         <SignupView />
       </>
-    )
+    );
   }
 
   if (selectedMovie) {
@@ -77,6 +80,7 @@ const MainView = () => {
       ))}
       <br />
       <button
+      className="logout__btn"
         onClick={() => {
           setUser(null);
           setToken(null);

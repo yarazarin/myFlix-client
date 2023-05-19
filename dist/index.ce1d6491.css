@@ -1,5 +1,5 @@
 .my-flix {
-  color: #4682b4;
+  color: #4b72fe;
 }
 
 .container_main {
@@ -14,7 +14,7 @@
   min-width: 300px;
   max-width: 300px;
   text-align: center;
-  background-color: #b446ad;
+  background-color: #ff2af1;
   border-top-left-radius: 50%;
   border-top-right-radius: 8px;
   font-size: 5rem;
@@ -22,7 +22,7 @@
 }
 
 .main__title:hover {
-  background-color: #4682b4;
+  background-color: #4b72fe;
 }
 
 .movie__card, .back-to {
@@ -30,7 +30,7 @@
   cursor: pointer;
   min-width: 300px;
   max-width: 300px;
-  background-color: #4682b4;
+  background-color: #4b72fe;
   border-radius: .5rem;
   padding: .5rem 1rem;
   font-size: 1rem;
@@ -47,6 +47,54 @@
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+form {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+}
+
+form label {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-weight: 900;
+  display: flex;
+}
+
+form label input {
+  width: 300px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+  transition: box-shadow .3s;
+  box-shadow: 0 0 5px #0000001a;
+}
+
+form label input:hover, form label input:focus {
+  box-shadow: 0 0 5px #0003;
+}
+
+form button[type="submit"] {
+  width: 120px;
+  color: #fff;
+  background-color: #0078ff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  transition: box-shadow .3s;
+  box-shadow: 0 0 5px #0003;
+}
+
+form button[type="submit"]:hover, form button[type="submit"]:focus {
+  box-shadow: 0 0 5px #0006;
 }
 
 /*# sourceMappingURL=index.ce1d6491.css.map */

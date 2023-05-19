@@ -1,3 +1,4 @@
+import "./SignupView.scss"
 import { useState } from "react";
 
 export const SignupView = () => {
