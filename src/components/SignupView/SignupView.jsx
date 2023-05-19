@@ -28,7 +28,7 @@ export const SignupView = () => {
         alert("Signup successful");
         window.location.reload();
       } else {
-        alert("Signup failed");
+        alert("try with another username, or check your information again");
       }
     });
   };
@@ -72,7 +72,7 @@ export const SignupView = () => {
           required
         />
       </label>
-      <button type="submit">Submit</button>
+      <button className="submit__btn" type="submit">Submit</button>
     </form>
   );
 };
