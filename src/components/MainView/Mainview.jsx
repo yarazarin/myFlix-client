@@ -40,16 +40,17 @@ const MainView = () => {
 
   if (!user) {
     return (
-      <>
+      <div className="log__view">
+        <h3>Log in!</h3>
         <LoginView
           onLoggedIn={(user, token) => {
             setUser(user);
             setToken(token);
           }}
         />
-        <h3>Or Signup!</h3>
+        <h3> Or Signup!</h3>
         <SignupView />
-      </>
+      </div>
     );
   }
 
@@ -80,7 +81,7 @@ const MainView = () => {
       ))}
       <br />
       <button
-      className="logout__btn"
+      className="submit__btn"
         onClick={() => {
           setUser(null);
           setToken(null);

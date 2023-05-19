@@ -1,7 +1,7 @@
-$color: rgb(75, 114, 254);
-$color2: rgb(90, 180, 70);
+$color: #2ecc70;
+$color2: #34e7e4;
 $color3: rgb(255, 228, 228);
-$color4: rgb(255, 42, 241);
+$color4: #ef5777;
 
 .my-flix {
   color: $color;
@@ -14,17 +14,19 @@ $color4: rgb(255, 42, 241);
   align-items: center;
   justify-content: center;
 }
-.main__title{
+.main__title {
   font-size: 5rem;
   display: block;
   min-width: 300px;
   max-width: 300px;
   text-align: center;
-  background-color:$color4 ;
-  border-top-left-radius:50% ;
-  border-top-right-radius:8px ;
+  background-color: $color4;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 8px;
+  transition: transform 1s;
   &:hover {
-    background-color: $color;
+    transform: rotate(10deg);
+    box-shadow: rgb(255, 145, 226) 0 0 0 5px;
   }
 }
 .movie__card,
@@ -37,6 +39,7 @@ $color4: rgb(255, 42, 241);
   cursor: pointer;
   min-width: 300px;
   max-width: 300px;
+  min-height: 40px;
   transition: all 0.2s ease-in-out;
 
   &:hover {
