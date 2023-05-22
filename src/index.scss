@@ -1,58 +1,9 @@
-$color: #000000;
-$color0: #ffffff;
-$color1: #e056fd;
-$color2: #34e7e4;
-$color3: #ffe4e4;
-$color4: #ef5777;
-
-.my-flix {
-  color: $color1;
-}
-
-.container_main {
-  display: flex;
-  height: 90vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.main__title {
-  font-size: 5rem;
-  display: block;
-  min-width: 300px;
-  max-width: 300px;
-  text-align: center;
-  background-color: $color4;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 8px;
-  transition: transform 1s;
-  &:hover {
-    transform: rotate(10deg);
-    box-shadow: rgb(255, 145, 226) 0 0 0 5px;
-  }
-}
-.movie__card,
-.back-to {
-  background-color: $color1;
-  color: $color0;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  min-width: 300px;
-  max-width: 300px;
-  min-height: 40px;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    background-color: $color4;
-  }
-}
-
-.movie__view {
-  display: flex;
-  height: 90vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+$primary: #cedfff;
+$secondary:#eabcff;
+$success:#cdb7ff;
+$danger:#ffbdbd;
+$warning:	#fff787;
+$info:#ff95c8;
+$light:#ffffff;
+$body-bg: hsl(115, 100%, 98%);
+@import '~bootstrap/scss/bootstrap.scss';

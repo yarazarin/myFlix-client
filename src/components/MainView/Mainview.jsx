@@ -1,9 +1,11 @@
-import "./MainView.scss";
 import { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieView from "../MovieView/MovieView";
 import { LoginView } from "../LoginView/LoginView";
 import { SignupView } from "../SignupView/SignupView";
+import Row from "react-bootstrap/Row";
+import { Col, Container } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -28,10 +30,10 @@ const MainView = () => {
           return {
             id: _id,
             title: Title,
-            director: Director.name,
+            director: Director.Name,
             image: imagePath,
             description: Description,
-            genre: Genre.name,
+            genre: Genre.Name,
           };
         });
         setMovies(moviesFromAPI);
@@ -40,26 +42,41 @@ const MainView = () => {
 
   if (!user) {
     return (
-      <div className="log__view">
-        <h3>Log in!</h3>
-        <LoginView
-          onLoggedIn={(user, token) => {
-            setUser(user);
-            setToken(token);
-          }}
-        />
-        <h3> Or Signup!</h3>
-        <SignupView />
-      </div>
+      <Row
+        className="justify-content-center align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <Col xs={12} md={3}>
+          <LoginView
+            onLoggedIn={(user, token) => {
+              setUser(user);
+              setToken(token);
+            }}
+          />
+        </Col>
+        <Col xs={12} md={5}>
+          <SignupView />
+        </Col>
+      </Row>
     );
   }
 
   if (selectedMovie) {
     return (
-      <MovieView
-        movie={selectedMovie}
-        onBackClick={() => setSelectedMovie(null)}
-      />
+      <div className="d-flex justify-content-center align-items-center min-vh-100">
+        <Container
+          fluid
+          className="bg-light p-4 rounded-lg shadow"
+          style={{ maxWidth: "800px", textAlign: "center" }}
+        >
+          <Col>
+            <MovieView
+              movie={selectedMovie}
+              onBackClick={() => setSelectedMovie(null)}
+            />
+          </Col>
+        </Container>
+      </div>
     );
   }
 
@@ -68,29 +85,43 @@ const MainView = () => {
   }
 
   return (
-    <div className="container_main">
-      <div className="main__title">myFlix</div>
-      {movies.map((movie) => (
-        <MovieCard
-          key={movie.id}
-          movie={movie}
-          onMovieClick={(newSelectedMovie) => {
-            setSelectedMovie(newSelectedMovie);
-          }}
-        />
-      ))}
-      <br />
-      <button
-        className="submit__btn"
-        onClick={() => {
-          setUser(null);
-          setToken(null);
-          localStorage.clear();
-        }}
+    <>
+      <Container
+        fluid
+        className="d-flex justify-content-between align-items-center mb-4 mt-0"
       >
-        Logout
-      </button>
-    </div>
+        <p className="display-4">myFlix</p>
+        <Button
+          variant="primary"
+          onClick={() => {
+            setUser(null);
+            setToken(null);
+            localStorage.clear();
+          }}
+        >
+          Logout
+        </Button>
+      </Container>
+
+      <Container fluid>
+        <Row
+          xs={1}
+          md={6}
+          className="justify-content-center align-items-center"
+        >
+          {movies.map((movie) => (
+            <Col key={movie.id} className="mb-4" md={3}>
+              <MovieCard
+                movie={movie}
+                onMovieClick={(newSelectedMovie) => {
+                  setSelectedMovie(newSelectedMovie);
+                }}
+              />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </>
   );
 };
 
