@@ -14,7 +14,6 @@ import { SignupView } from "../SignupView/SignupView";
 import Row from "react-bootstrap/Row";
 import { Col, Container } from "react-bootstrap";
 import NavBar from "../NavBar/NavBar";
-import { propTypes } from "react-bootstrap/esm/Image";
 
 export default MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -22,7 +21,6 @@ export default MainView = () => {
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [viewMovies, setMovies] = useState([]);
-  // const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
     if (!token) {
@@ -33,7 +31,6 @@ export default MainView = () => {
     })
       .then((respounse) => respounse.json())
       .then((data) => {
-        console.log("data :", data);
         const moviesFromAPI = data.map((movie) => {
           const { _id, Title, Director, imagePath, Description, Genre } = movie;
           return {
@@ -61,10 +58,10 @@ export default MainView = () => {
 
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBar user={user} setUser={setUser} setToken={setToken} />
       <Routes>
         <Route
-          path="/"
+          path="/login"
           element={
             !user ? (
               <Row
@@ -135,12 +132,7 @@ export default MainView = () => {
                       {viewMovies.map((movie) => (
                         <Col key={movie.id} className="mb-4" md={3}>
                           <Link to={`/movie/${encodeURIComponent(movie.id)}`}>
-                            <MovieCard
-                              movie={movie}
-                              onMovieClick={(newSelectedMovie) => {
-                                setSelectedMovie(newSelectedMovie);
-                              }}
-                            />
+                            <MovieCard movie={movie} />
                           </Link>
                         </Col>
                       ))}
