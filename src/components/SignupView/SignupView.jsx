@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 export const SignupView = () => {
   const [username, setUsername] = useState("");
@@ -79,8 +80,11 @@ export const SignupView = () => {
       </Form.Group>
       <br />
       <Button variant="primary" type="submit">
-        Submit
+        Signup
       </Button>
+      <br />
+      <br />
+      <Link to="/">Already have an account?</Link>
     </Form>
   );
 };

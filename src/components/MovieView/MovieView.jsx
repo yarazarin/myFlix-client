@@ -1,11 +1,15 @@
+import React from "react";
 import PropTypes from "prop-types";
-import { Col, Container, Row, Button, Image } from "react-bootstrap";
+import { Col, Row, Button, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const MovieView = ({ movie, onBackClick }) => {
+const MovieView = ({ movie }) => {
   return (
-    <>
       <Row>
-        <Col md={7} className="d-flex flex-column justify-content-center align-items-center">
+        <Col
+          md={7}
+          className="d-flex flex-column justify-content-center align-items-center"
+        >
           <div>
             <h2>{movie.title}</h2>
           </div>
@@ -22,15 +26,16 @@ const MovieView = ({ movie, onBackClick }) => {
             <span>{movie.description}</span>
           </div>
           <br />
-          <Button onClick={onBackClick}>Back</Button>
-          <br/>
+          <Link to="/movies">
+            <Button>Back</Button>
+          </Link>
+          <br />
         </Col>
 
         <Col md={5}>
           <Image src={movie.image} />
         </Col>
       </Row>
-    </>
   );
 };
 
@@ -42,7 +47,6 @@ MovieView.propTypes = {
     genre: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,
-  onBackClick: PropTypes.func.isRequired,
 };
 
 export default MovieView;

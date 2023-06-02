@@ -1,6 +1,5 @@
 node_modules
 trash
-dist
 .cache
 .parcel-cache
 .gitignore
