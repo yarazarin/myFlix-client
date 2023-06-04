@@ -2,7 +2,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Link,
   Navigate,
   useParams,
 } from "react-router-dom";
@@ -14,6 +13,7 @@ import { SignupView } from "../SignupView/SignupView";
 import Row from "react-bootstrap/Row";
 import { Col, Container } from "react-bootstrap";
 import NavBar from "../NavBar/NavBar";
+import { ProfileView } from "../ProfileView/ProfileView";
 
 export default MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -51,9 +51,13 @@ export default MainView = () => {
     const movieId = decodeURIComponent(id);
     const movie = viewMovies.find((movie) => movie.id === movieId);
     if (!movie) {
-      return <div>Movie not found!</div>;
+      return <div>It seems you need to login first </div>;
     }
     return <MovieView movie={movie} />;
+  };
+
+  const handleUserDelete = () => {
+    setUser(null);
   };
 
   return (
@@ -131,9 +135,7 @@ export default MainView = () => {
                     >
                       {viewMovies.map((movie) => (
                         <Col key={movie.id} className="mb-4" md={3}>
-                          <Link to={`/movie/${encodeURIComponent(movie.id)}`}>
-                            <MovieCard movie={movie} />
-                          </Link>
+                          <MovieCard movie={movie} />
                         </Col>
                       ))}
                     </Row>
@@ -161,6 +163,23 @@ export default MainView = () => {
                 </Container>
               </div>
             </>
+          }
+        />
+
+        <Route
+          path="/profile"
+          element={
+            !user ? (
+              <Navigate to="/" replace />
+            ) : (
+              <ProfileView
+                user={user}
+                token={token}
+                setUser={setUser}
+                setMovies={setMovies}
+                deleteUser={handleUserDelete}
+              />
+            )
           }
         />
       </Routes>

@@ -8,6 +8,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap": "^5.2.3",
     "cors": "^2.8.5",
     "parcel": "^2.8.3",
@@ -16,7 +20,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-router": "6.3.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",

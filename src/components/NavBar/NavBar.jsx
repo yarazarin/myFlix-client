@@ -36,9 +36,11 @@ function NavBar({ user, setUser, setToken }) {
               <Nav.Link as={Link} to="/movies">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/profile">
-                Profile
-              </Nav.Link>
+              {user && (
+                <Nav.Link as={Link} to="/profile">
+                  Profile
+                </Nav.Link>
+              )}
               <Nav.Link onClick={onLoggedOut}>Logout</Nav.Link>
             </>
           )}

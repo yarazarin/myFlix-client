@@ -11998,4 +11998,12 @@ textarea.form-control-lg {
   }
 }
 
+.welcome {
+  width: 400px;
+  height: 400px;
+  background-color: #333;
+  border: 100px solid;
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=index.ce1d6491.css.map */
