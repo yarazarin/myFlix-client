@@ -1,6 +1,7 @@
 import MovieCard from "../MovieCard/MovieCard";
 import React, { useState, useEffect } from "react";
 import { Col, Container, Form, Button, Row } from "react-bootstrap";
+import bcryptjs from "bcryptjs";
 
 export const ProfileView = ({
   user,
@@ -31,8 +32,11 @@ export const ProfileView = ({
       });
   }, [user, token]);
 
-  const handleUpdate = (e) => {
+  const handleUpdate = async (e) => {
     e.preventDefault();
+    const salt = await bcryptjs.genSalt(10);
+    const hashedPassword = await bcryptjs.hash(updatedUser.Password, salt);
+
     fetch(`https://evening-inlet-09970.herokuapp.com/users/${user.Username}`, {
       method: "PUT",
       headers: {
@@ -41,7 +45,7 @@ export const ProfileView = ({
       },
       body: JSON.stringify({
         Username: updatedUser.Username,
-        Password: updatedUser.Password,
+        Password: hashedPassword,
         Email: updatedUser.Email,
         Birthday: updatedUser.Birthday,
       }),
@@ -60,6 +64,7 @@ export const ProfileView = ({
     fetch(`https://evening-inlet-09970.herokuapp.com/users/${user.Username}`, {
       method: "DELETE",
       headers: {
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
     })
@@ -114,7 +119,7 @@ export const ProfileView = ({
           <Form.Label>Username:</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter username"
+            placeholder="Enter yor new username"
             onChange={(e) =>
               setUpdatedUser({ ...updatedUser, Username: e.target.value })
             }
@@ -124,9 +129,9 @@ export const ProfileView = ({
           <Form.Label>Password:</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Enter password"
+            placeholder="Enter your new password"
             onChange={(e) =>
-              setUser({ ...updatedUser, Password: e.target.value })
+              setUpdatedUser({ ...updatedUser, Password: e.target.value })
             }
           />
         </Form.Group>
