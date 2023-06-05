@@ -1,8 +1,20 @@
+import MovieCard from "../MovieCard/MovieCard";
 import React, { useState, useEffect } from "react";
-import { Col, Container, Form, Button } from "react-bootstrap";
+import { Col, Container, Form, Button, Row } from "react-bootstrap";
 
-export const ProfileView = ({ user, token, setUser, setMovies }) => {
+export const ProfileView = ({
+  user,
+  token,
+  setUser,
+  removeMovieFromFavorites,
+}) => {
   const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const [updatedUser, setUpdatedUser] = useState(user);
+
+  useEffect(() => {
+    setUpdatedUser(user);
+  }, [user]);
+
   useEffect(() => {
     if (!user || !token) {
       return;
@@ -27,7 +39,12 @@ export const ProfileView = ({ user, token, setUser, setMovies }) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify({
+        Username: updatedUser.Username,
+        Password: updatedUser.Password,
+        Email: updatedUser.Email,
+        Birthday: updatedUser.Birthday,
+      }),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -54,7 +71,7 @@ export const ProfileView = ({ user, token, setUser, setMovies }) => {
       .catch((error) => {
         console.log(error);
       });
-      alert("Your account has been deleted successfully 😿")
+    alert("Your account has been deleted successfully 😿");
     setUser(null);
     localStorage.clear();
   };
@@ -65,11 +82,33 @@ export const ProfileView = ({ user, token, setUser, setMovies }) => {
       <p>Email: {user.Email}</p>
       <p>Birthday: {user.Birthday}</p>
       <h6>Your Favorite Movies:</h6>
-      <ul>
-        {favoriteMovies.map((movie) => (
-          <li key={movie._id}>{movie.Title}</li>
-        ))}
-      </ul>
+      <Row>
+        {favoriteMovies.map((movie) => {
+          const { _id, Title, Director, imagePath, Description, Genre } = movie;
+          return (
+            <Col key={_id} xs={12} sm={6} md={4} lg={3}>
+              <MovieCard
+                movie={{
+                  id: _id,
+                  title: Title,
+                  director: Director.Name,
+                  image: imagePath,
+                  description: Description,
+                  genre: Genre.Name,
+                }}
+                favoriteMovies={favoriteMovies}
+              />
+              <Button
+                variant="danger"
+                onClick={() => removeMovieFromFavorites(_id)}
+              >
+                Remove from Favorites
+              </Button>
+            </Col>
+          );
+        })}
+      </Row>
+
       <Form onSubmit={handleUpdate}>
         <Form.Group controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
@@ -77,7 +116,20 @@ export const ProfileView = ({ user, token, setUser, setMovies }) => {
             type="text"
             placeholder="Enter username"
             value={user.Username}
-            onChange={(e) => setUser({ ...user, Username: e.target.value })}
+            onChange={(e) =>
+              setUpdatedUser({ ...updatedUser, Username: e.target.value })
+            }
+          />
+        </Form.Group>
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Enter password"
+            value={updatedUser.Password}
+            onChange={(e) =>
+              setUser({ ...updatedUser, Password: e.target.value })
+            }
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -85,8 +137,8 @@ export const ProfileView = ({ user, token, setUser, setMovies }) => {
           <Form.Control
             type="email"
             placeholder="Enter email"
-            value={user.Email}
-            onChange={(e) => setUser({ ...user, Email: e.target.value })}
+            value={updatedUser.Email}
+            onChange={(e) => setUser({ ...updatedUser, Email: e.target.value })}
           />
         </Form.Group>
         <Form.Group controlId="formBasicBirthday">
@@ -94,9 +146,10 @@ export const ProfileView = ({ user, token, setUser, setMovies }) => {
           <Form.Control
             type="date"
             placeholder="Enter birthday"
-            value={user.Birthday}
-            onChange={(e) => setUser({ ...user, Birthday: e.target.value })}
-            dateFormat="yyyy-MM-dd"
+            value={updatedUser.Birthday}
+            onChange={(e) =>
+              setUpdatedUser({ ...updatedUser, Birthday: e.target.value })
+            }
           />
         </Form.Group>
         <Button variant="primary" type="submit">

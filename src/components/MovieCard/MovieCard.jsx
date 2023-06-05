@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const MovieCard = ({ movie }) => {
-  const [bookmarked, setBookmarked] = useState(false);
-  const handleBookmarkClick = () => {
-    setBookmarked(!bookmarked);
-  };
+  // const [bookmarked, setBookmarked] = useState(false);
+  // const handleBookmarkClick = () => {
+  //   setBookmarked(!bookmarked);
+  // };
   return (
     <>
       <Link to={`/movie/${encodeURIComponent(movie.id)}`}>
@@ -20,7 +20,7 @@ const MovieCard = ({ movie }) => {
           </Card.Body>
         </Card>
       </Link>
-      <button
+      {/* <button
         className={`fa ${bookmarked ? "fa-solid fa fa-check" : "fa fa-plus"}`}
         style={{
           position: "relative",
@@ -35,7 +35,7 @@ const MovieCard = ({ movie }) => {
           cursor: "pointer",
         }}
         onClick={handleBookmarkClick}
-      />
+      /> */}
     </>
   );
 };

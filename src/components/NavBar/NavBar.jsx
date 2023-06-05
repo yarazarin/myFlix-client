@@ -1,13 +1,16 @@
 import { Navbar } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import myFlix from "../../img/myFlix.png";
+
 function NavBar({ user, setUser, setToken }) {
+  const navigate = useNavigate();
   const onLoggedOut = () => {
     setUser(null);
     setToken(null);
     localStorage.clear();
+    navigate("/login");
   };
   return (
     <Navbar>

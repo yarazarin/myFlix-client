@@ -15,12 +15,48 @@ import { Col, Container } from "react-bootstrap";
 import NavBar from "../NavBar/NavBar";
 import { ProfileView } from "../ProfileView/ProfileView";
 
-export default MainView = () => {
+const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
   const storedToken = localStorage.getItem("token");
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [viewMovies, setMovies] = useState([]);
+
+  const MovieViewWrapper = () => {
+    const { id } = useParams();
+    const movieId = decodeURIComponent(id);
+    const movie = viewMovies.find((movie) => movie.id === movieId);
+    if (!movie) {
+      return <div>It seems you need to login first </div>;
+    }
+    return (
+      <MovieView
+        movie={{ ...movie, _id: movie.id }}
+        addMovieToFavorites={addMovieToFavorites}
+      />
+    );
+  };
+
+  const addMovieToFavorites = (movieId) => {
+    fetch(
+      `https://evening-inlet-09970.herokuapp.com/users/${user.Username}/movies/${movieId}`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setUser(data);
+        setFavoriteMovies([...favoriteMovies, movieId]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     if (!token) {
@@ -29,7 +65,7 @@ export default MainView = () => {
     fetch("https://evening-inlet-09970.herokuapp.com/movies", {
       headers: { Authorization: `Bearer ${token}` },
     })
-      .then((respounse) => respounse.json())
+      .then((response) => response.json())
       .then((data) => {
         const moviesFromAPI = data.map((movie) => {
           const { _id, Title, Director, imagePath, Description, Genre } = movie;
@@ -46,14 +82,27 @@ export default MainView = () => {
       });
   }, [token]);
 
-  const MovieViewWrapper = () => {
-    const { id } = useParams();
-    const movieId = decodeURIComponent(id);
-    const movie = viewMovies.find((movie) => movie.id === movieId);
-    if (!movie) {
-      return <div>It seems you need to login first </div>;
-    }
-    return <MovieView movie={movie} />;
+  const removeMovieFromFavorites = (movieId) => {
+    fetch(
+      `https://evening-inlet-09970.herokuapp.com/users/${user.Username}/movies/${movieId}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setUser(data);
+        setFavoriteMovies(
+          favoriteMovies.filter((favMovieId) => favMovieId !== movieId)
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const handleUserDelete = () => {
@@ -178,6 +227,7 @@ export default MainView = () => {
                 setUser={setUser}
                 setMovies={setMovies}
                 deleteUser={handleUserDelete}
+                removeMovieFromFavorites={removeMovieFromFavorites}
               />
             )
           }
@@ -186,3 +236,5 @@ export default MainView = () => {
     </BrowserRouter>
   );
 };
+
+export default MainView;
