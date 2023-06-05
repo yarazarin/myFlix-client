@@ -111,22 +111,20 @@ export const ProfileView = ({
 
       <Form onSubmit={handleUpdate}>
         <Form.Group controlId="formBasicUsername">
-          <Form.Label>Username</Form.Label>
+          <Form.Label>Username:</Form.Label>
           <Form.Control
             type="text"
             placeholder="Enter username"
-            value={user.Username}
             onChange={(e) =>
               setUpdatedUser({ ...updatedUser, Username: e.target.value })
             }
           />
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Password:</Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter password"
-            value={updatedUser.Password}
             onChange={(e) =>
               setUser({ ...updatedUser, Password: e.target.value })
             }
