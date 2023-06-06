@@ -46510,7 +46510,7 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7GV9H":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","prop-types":"7wKI2","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7GV9H":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0aaf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -47239,7 +47239,7 @@ const ProfileView = ({ user , token , setUser , removeMovieFromFavorites  })=>{
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
                                 type: "text",
-                                placeholder: "Enter yor new username",
+                                placeholder: "Enter your new username",
                                 onChange: (e)=>setUpdatedUser({
                                         ...updatedUser,
                                         Username: e.target.value
@@ -47313,7 +47313,6 @@ const ProfileView = ({ user , token , setUser , removeMovieFromFavorites  })=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
-                        controlId: "formBasicBirthday",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
                                 children: "Birthday"
@@ -49560,8 +49559,8 @@ exports.constants = {
 };
 
 },{"a849114119b5eed5":"8hjhE","2cf09ec50d582308":"2WyL8","11b367a9dde9d751":"k1utz","30593fa005541bfe":"busIB","b0e143f380929027":"g38Hg","fffb63f4c8452e92":"d4idn","50d62f8ee8af92da":"hwD3y","63d2d584992338b8":"jbRNy","97e0f970f061b2c5":"9Rcg1","95e993c2393d770d":"h9Rdh","50fefa9068d65d0a":"k3tsT"}],"8hjhE":[function(require,module,exports) {
-var process = require("6c31f8eb912976f1");
 var global = arguments[3];
+var process = require("6c31f8eb912976f1");
 "use strict";
 // limit of Crypto.getRandomValues()
 // https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues
@@ -51325,8 +51324,8 @@ exports.pipeline = require("82715fc9bf520b56");
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
-var global = arguments[3];
 var process = require("9556eb94f3573d32");
+var global = arguments[3];
 "use strict";
 module.exports = Readable;
 /*<replacement>*/ var Duplex;
@@ -84839,8 +84838,8 @@ function compare(a, b) {
 }
 
 },{"1dca65021ea340a4":"4Szbv","ed10bf3cb1e1be70":"e2JgG","bc52db97d95e2551":"iaxu0","9f816c532187294d":"3pDum","cf39efd3c2fe3490":"e594P","89ad43d76d56f4a6":"2WyL8","fa4a341bf0c6a39":"fFkPV","9e73586265daea11":"eW7r9"}],"k3tsT":[function(require,module,exports) {
-var process = require("77e31ca60c2aa84c");
 var global = arguments[3];
+var process = require("77e31ca60c2aa84c");
 "use strict";
 function oldBrowser() {
     throw new Error("secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11");

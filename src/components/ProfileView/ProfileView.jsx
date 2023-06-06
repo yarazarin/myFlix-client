@@ -119,7 +119,7 @@ export const ProfileView = ({
           <Form.Label>Username:</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter yor new username"
+            placeholder="Enter your new username"
             onChange={(e) =>
               setUpdatedUser({ ...updatedUser, Username: e.target.value })
             }
@@ -144,7 +144,7 @@ export const ProfileView = ({
             onChange={(e) => setUser({ ...updatedUser, Email: e.target.value })}
           />
         </Form.Group>
-        <Form.Group controlId="formBasicBirthday">
+        <Form.Group>
           <Form.Label>Birthday</Form.Label>
           <Form.Control
             type="date"
