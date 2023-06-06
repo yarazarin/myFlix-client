@@ -7,7 +7,6 @@ import {
   Button,
   Row,
   Card,
-  CardDeck,
 } from "react-bootstrap";
 import bcryptjs from "bcryptjs";
 export const ProfileView = ({
@@ -40,7 +39,7 @@ export const ProfileView = ({
     e.preventDefault();
     const salt = await bcryptjs.genSalt(10);
     const hashedPassword = await bcryptjs.hash(updatedUser.Password, salt);
-    
+
     fetch(`https://evening-inlet-09970.herokuapp.com/users/${user.Username}`, {
       method: "PUT",
       headers: {
@@ -61,7 +60,6 @@ export const ProfileView = ({
       .catch((error) => {
         console.log(error);
       });
-    console.log(updatedUser);
   };
   const handleDeregister = (e) => {
     e.preventDefault();
@@ -74,7 +72,6 @@ export const ProfileView = ({
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         deleteUser();
       })
       .catch((error) => {
@@ -82,7 +79,7 @@ export const ProfileView = ({
       });
     alert("Your account has been deleted successfully 😿");
     setUser(null);
-    // localStorage.clear();
+    localStorage.clear();
   };
   return (
     <Container>
@@ -99,7 +96,7 @@ export const ProfileView = ({
               const { _id, Title, Director, imagePath, Description, Genre } =
                 movie;
               return (
-                <Col key={_id} xs={12} sm={6} md={4} lg={3}>
+                <Col key={_id} xs={12} sm={6} md={4} lg={3} style={{display: "flex", flexDirection:"column", justifyContent:"center", }}>
                   <MovieCard
                     movie={{
                       id: _id,
@@ -111,14 +108,13 @@ export const ProfileView = ({
                     }}
                     favoriteMovies={favoriteMovies}
                   />
-                  <Button
-                    className="mt-2"
-                    variant="danger"
-                    block
-                    onClick={() => removeMovieFromFavorites(_id)}
-                  >
-                    Remove from Favorites
-                  </Button>
+                    <Button
+                      className="mt-2"
+                      variant="danger"
+                      onClick={() => removeMovieFromFavorites(_id)}
+                    >
+                      Remove from Favorites
+                    </Button>
                   <br />
                 </Col>
               );
@@ -179,7 +175,7 @@ export const ProfileView = ({
               />
             </Form.Group>
             <br />
-            <Button className="mr-2" variant="primary" type="submit">
+            <Button className="mr-2" variant="danger" type="submit">
               Update
             </Button>
             <hr />

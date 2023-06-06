@@ -51,7 +51,6 @@ const MainView = () => {
       .then((data) => {
         console.log(data);
         setUser(data);
-        setFavoriteMovies([...favoriteMovies, movieId]);
       })
       .catch((error) => {
         console.log(error);
@@ -96,9 +95,6 @@ const MainView = () => {
       .then((data) => {
         console.log(data);
         setUser(data);
-        setFavoriteMovies(
-          favoriteMovies.filter((favMovieId) => favMovieId !== movieId)
-        );
       })
       .catch((error) => {
         console.log(error);
