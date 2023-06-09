@@ -1,13 +1,6 @@
 import MovieCard from "../MovieCard/MovieCard";
 import React, { useState, useEffect } from "react";
-import {
-  Col,
-  Container,
-  Form,
-  Button,
-  Row,
-  Card,
-} from "react-bootstrap";
+import { Col, Container, Form, Button, Row, Card } from "react-bootstrap";
 import bcryptjs from "bcryptjs";
 export const ProfileView = ({
   user,
@@ -56,6 +49,7 @@ export const ProfileView = ({
       .then((response) => response.json())
       .then((data) => {
         setUser(data);
+        alert("Your information has been saved successfully!");
       })
       .catch((error) => {
         console.log(error);
@@ -63,29 +57,35 @@ export const ProfileView = ({
   };
   const handleDeregister = (e) => {
     e.preventDefault();
-    fetch(`https://evening-inlet-09970.herokuapp.com/users/${user.Username}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        deleteUser();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    alert("Your account has been deleted successfully 😿");
-    setUser(null);
-    localStorage.clear();
+    if (window.confirm("Are you sure you want to delete your account?")) {
+      fetch(
+        `https://evening-inlet-09970.herokuapp.com/users/${user.Username}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          deleteUser();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      alert("Your account has been deleted successfully 😿");
+      setUser(null);
+      localStorage.clear();
+    }
   };
   return (
     <Container>
-      <h1>Hi {user.Username} </h1>
+      <hr />
+      <h1>Hello dear "{user.Username}" </h1>
       <p>Email: {user.Email}</p>
-      <p>Birthday: {user.Birthday}</p>
+      <p>Birthday: {new Date(user.Birthday).toISOString().slice(0, 10)}</p>
       <Card className="mb-4">
         <Card.Header>
           <h6>Your Favorite Movies:</h6>
@@ -96,7 +96,18 @@ export const ProfileView = ({
               const { _id, Title, Director, imagePath, Description, Genre } =
                 movie;
               return (
-                <Col key={_id} xs={12} sm={6} md={4} lg={3} style={{display: "flex", flexDirection:"column", justifyContent:"center", }}>
+                <Col
+                  key={_id}
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  lg={3}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
                   <MovieCard
                     movie={{
                       id: _id,
@@ -108,13 +119,13 @@ export const ProfileView = ({
                     }}
                     favoriteMovies={favoriteMovies}
                   />
-                    <Button
-                      className="mt-2"
-                      variant="danger"
-                      onClick={() => removeMovieFromFavorites(_id)}
-                    >
-                      Remove from Favorites
-                    </Button>
+                  <Button
+                    className="mt-2"
+                    variant="danger"
+                    onClick={() => removeMovieFromFavorites(_id)}
+                  >
+                    Remove from Favorites
+                  </Button>
                   <br />
                 </Col>
               );
@@ -136,6 +147,8 @@ export const ProfileView = ({
                 onChange={(e) =>
                   setUpdatedUser({ ...updatedUser, Username: e.target.value })
                 }
+                value={updatedUser.Username}
+                required
               />
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
@@ -146,6 +159,7 @@ export const ProfileView = ({
                 onChange={(e) =>
                   setUpdatedUser({ ...updatedUser, Password: e.target.value })
                 }
+                required
               />
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
@@ -157,6 +171,7 @@ export const ProfileView = ({
                 onChange={(e) =>
                   setUpdatedUser({ ...updatedUser, Email: e.target.value })
                 }
+                required
               />
             </Form.Group>
             <Form.Group>
@@ -172,14 +187,14 @@ export const ProfileView = ({
                 onChange={(e) =>
                   setUpdatedUser({ ...updatedUser, Birthday: e.target.value })
                 }
+                required
               />
             </Form.Group>
             <br />
-            <Button className="mr-2" variant="danger" type="submit">
-              Update
+            <Button className="mr-2" variant="primary" type="submit">
+              Save
             </Button>
             <hr />
-            <br />
             <br />
             <div>
               <h3>Delete Account:</h3>
@@ -193,7 +208,7 @@ export const ProfileView = ({
                 services and records.
               </code>
               <br />
-              <Button variant="danger" onClick={handleDeregister}>
+              <Button variant="warning" onClick={handleDeregister}>
                 Delete Account
               </Button>
             </div>
