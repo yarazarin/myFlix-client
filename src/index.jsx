@@ -6,7 +6,7 @@ import MainView from "./components/MainView/MainView";
 const MyFlixApplication = () => {
   return (
     <Container>
-      <MainView/>
+      <MainView />
     </Container>
   );
 };
