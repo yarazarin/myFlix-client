@@ -5,6 +5,7 @@ import {
   Navigate,
   useParams,
 } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieView from "../MovieView/MovieView";
