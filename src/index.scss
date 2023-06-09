@@ -1,11 +1,11 @@
-$primary: #3e3e3e;
-$secondary: #eabcff;
-$success: #cdb7ff;
-$danger: #ffbdbd;
-$warning: #ffee00;
-$info: #ff95c8;
-$light: #ffffff;
-$body-bg: #f6fff5;
+// $primary: #3e3e3e;
+// $secondary: #eabcff;
+// $success: #cdb7ff;
+// $danger: #ffbdbd;
+// $warning: #ffee00;
+// $info: #ff95c8;
+// $light: #ffffff;
+// $body-bg: #f6fff5;
 @import "~bootstrap/scss/bootstrap.scss";
 
 body {
@@ -25,4 +25,15 @@ body {
   z-index: -1;
   top: 0;
   left: 0;
+}
+Button{
+  background-color: #3e3e3e;
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 8px 4px;
+  cursor: pointer;
 }

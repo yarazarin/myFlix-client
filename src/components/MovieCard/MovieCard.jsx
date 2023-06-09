@@ -6,7 +6,14 @@ const MovieCard = ({ movie }) => {
   return (
     <>
       <Link to={`/movie/${encodeURIComponent(movie.id)}`}>
-        <Card style={{ display:"flex", minHeight: "320px", textAlign: "center", justifyContent:"center",alignItems:"center" }}>
+        <Card
+          style={{
+            display: "flex",
+            textAlign: "center",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <Card.Img src={movie.image} />
           <Card.Body>
             <Card.Title style={{ fontSize: "1.2rem" }}>

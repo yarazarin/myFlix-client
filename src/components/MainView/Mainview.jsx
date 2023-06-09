@@ -201,8 +201,8 @@ const MainView = () => {
                 <div className="d-flex justify-content-center align-items-center">
                   <Container
                     fluid
-                    className="bg-light p-4 rounded-lg shadow"
-                    style={{ maxWidth: "800px", textAlign: "center" }}
+                    className="bg-dark p-4 rounded-lg shadow"
+                    // style={{ maxWidth: "800px", textAlign: "center" }}
                   >
                     <Col>
                       <MovieViewWrapper />
