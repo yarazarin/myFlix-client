@@ -18,7 +18,7 @@ import { p } from "../../img/p.png";
 import Footer from "../Fotter/Footer";
 import Home from "../Home/Home";
 
-const MainView = () => {
+export default MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
   const storedToken = localStorage.getItem("token");
   const [user, setUser] = useState(storedUser ? storedUser : null);
@@ -235,5 +235,3 @@ const MainView = () => {
     </>
   );
 };
-
-export default MainView;

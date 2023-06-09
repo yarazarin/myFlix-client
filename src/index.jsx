@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { Container } from "react-bootstrap";
 import "./index.scss";
-import MainView from "./components/MainView/MainView";
+import MainView from './components/MainView/MainView';
 
 const MyFlixApplication = () => {
   return (
