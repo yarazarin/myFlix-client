@@ -2929,11 +2929,11 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _reactBootstrap = require("react-bootstrap");
 var _indexScss = require("./index.scss");
-var _mainView = require("./components/MainView/MainView");
-var _mainViewDefault = parcelHelpers.interopDefault(_mainView);
+var _app = require("./components/App/App");
+var _appDefault = parcelHelpers.interopDefault(_app);
 const MyFlixApplication = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainViewDefault.default), {}, void 0, false, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
             fileName: "src/index.jsx",
             lineNumber: 9,
             columnNumber: 7
@@ -2960,7 +2960,7 @@ $RefreshReg$(_c, "MyFlixApplication");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react-bootstrap":"3AD9A","./index.scss":"lJZlQ","./components/MainView/MainView":"8CR3S","@parcel/transformer-js/src/esmodule-helpers.js":"47lQb","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4OVZs"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react-bootstrap":"3AD9A","./index.scss":"lJZlQ","./components/App/App":"9WRdF","@parcel/transformer-js/src/esmodule-helpers.js":"47lQb","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4OVZs"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ce7355961199861f");
 
@@ -40474,11 +40474,11 @@ const Tooltip = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , placement ="right"
 Tooltip.displayName = "Tooltip";
 exports.default = Tooltip;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./helpers":"gotcT","./getInitialPopperStyles":"c8j3Q","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"47lQb"}],"lJZlQ":[function() {},{}],"8CR3S":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$067f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./helpers":"gotcT","./getInitialPopperStyles":"c8j3Q","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"47lQb"}],"lJZlQ":[function() {},{}],"9WRdF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2bea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$067f.prelude(module);
+$parcel$ReactRefreshHelpers$2bea.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -40504,7 +40504,7 @@ var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _home = require("../Home/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _s = $RefreshSig$();
-const MainView = ()=>{
+exports.default = App = _s(()=>{
     _s();
     var _s1 = $RefreshSig$();
     const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -40520,8 +40520,8 @@ const MainView = ()=>{
         if (!movie) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: "It seems you need to login first "
         }, void 0, false, {
-            fileName: "src/components/MainView/MainView.jsx",
-            lineNumber: 33,
+            fileName: "src/components/App/App.jsx",
+            lineNumber: 34,
             columnNumber: 14
         }, undefined);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieViewDefault.default), {
@@ -40531,8 +40531,8 @@ const MainView = ()=>{
             },
             addMovieToFavorites: addMovieToFavorites
         }, void 0, false, {
-            fileName: "src/components/MainView/MainView.jsx",
-            lineNumber: 36,
+            fileName: "src/components/App/App.jsx",
+            lineNumber: 37,
             columnNumber: 7
         }, undefined);
     };
@@ -40602,8 +40602,8 @@ const MainView = ()=>{
                         setUser: setUser,
                         setToken: setToken
                     }, void 0, false, {
-                        fileName: "src/components/MainView/MainView.jsx",
-                        lineNumber: 114,
+                        fileName: "src/components/App/App.jsx",
+                        lineNumber: 115,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -40611,8 +40611,8 @@ const MainView = ()=>{
                         alt: "",
                         className: "main-background"
                     }, void 0, false, {
-                        fileName: "src/components/MainView/MainView.jsx",
-                        lineNumber: 115,
+                        fileName: "src/components/App/App.jsx",
+                        lineNumber: 116,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
@@ -40621,8 +40621,8 @@ const MainView = ()=>{
                                 path: "/",
                                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, void 0, void 0)
                             }, void 0, false, {
-                                fileName: "src/components/MainView/MainView.jsx",
-                                lineNumber: 117,
+                                fileName: "src/components/App/App.jsx",
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -40647,8 +40647,8 @@ const MainView = ()=>{
                                     replace: true
                                 }, void 0, false, void 0, void 0)
                             }, void 0, false, {
-                                fileName: "src/components/MainView/MainView.jsx",
-                                lineNumber: 118,
+                                fileName: "src/components/App/App.jsx",
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -40673,8 +40673,8 @@ const MainView = ()=>{
                                     replace: true
                                 }, void 0, false, void 0, void 0)
                             }, void 0, false, {
-                                fileName: "src/components/MainView/MainView.jsx",
-                                lineNumber: 140,
+                                fileName: "src/components/App/App.jsx",
+                                lineNumber: 141,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -40712,8 +40712,8 @@ const MainView = ()=>{
                                     ]
                                 }, void 0, true)
                             }, void 0, false, {
-                                fileName: "src/components/MainView/MainView.jsx",
-                                lineNumber: 162,
+                                fileName: "src/components/App/App.jsx",
+                                lineNumber: 163,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -40723,11 +40723,7 @@ const MainView = ()=>{
                                         className: "d-flex justify-content-center align-items-center",
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
                                             fluid: true,
-                                            className: "bg-light p-4 rounded-lg shadow",
-                                            style: {
-                                                maxWidth: "800px",
-                                                textAlign: "center"
-                                            },
+                                            className: "bg-dark p-4 rounded-lg shadow",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MovieViewWrapper, {}, void 0, false, void 0, void 0)
                                             }, void 0, false, void 0, void 0)
@@ -40735,8 +40731,8 @@ const MainView = ()=>{
                                     }, void 0, false, void 0, void 0)
                                 }, void 0, false)
                             }, void 0, false, {
-                                fileName: "src/components/MainView/MainView.jsx",
-                                lineNumber: 197,
+                                fileName: "src/components/App/App.jsx",
+                                lineNumber: 198,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -40753,37 +40749,32 @@ const MainView = ()=>{
                                     removeMovieFromFavorites: removeMovieFromFavorites
                                 }, void 0, false, void 0, void 0)
                             }, void 0, false, {
-                                fileName: "src/components/MainView/MainView.jsx",
-                                lineNumber: 215,
+                                fileName: "src/components/App/App.jsx",
+                                lineNumber: 216,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/MainView/MainView.jsx",
-                        lineNumber: 116,
+                        fileName: "src/components/App/App.jsx",
+                        lineNumber: 117,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/MainView/MainView.jsx",
-                lineNumber: 113,
+                fileName: "src/components/App/App.jsx",
+                lineNumber: 114,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
-                fileName: "src/components/MainView/MainView.jsx",
-                lineNumber: 234,
+                fileName: "src/components/App/App.jsx",
+                lineNumber: 235,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
-};
-_s(MainView, "ZAcklZXkrcVE4doz8RWWwPGJMWA=");
-_c = MainView;
-exports.default = MainView;
-var _c;
-$RefreshReg$(_c, "MainView");
+}, "ZAcklZXkrcVE4doz8RWWwPGJMWA=");
 
-  $parcel$ReactRefreshHelpers$067f.postlude(module);
+  $parcel$ReactRefreshHelpers$2bea.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -46314,7 +46305,6 @@ const MovieCard = ({ movie  })=>{
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card), {
                 style: {
                     display: "flex",
-                    minHeight: "320px",
                     textAlign: "center",
                     justifyContent: "center",
                     alignItems: "center"
@@ -46324,7 +46314,7 @@ const MovieCard = ({ movie  })=>{
                         src: movie.image
                     }, void 0, false, {
                         fileName: "src/components/MovieCard/MovieCard.jsx",
-                        lineNumber: 10,
+                        lineNumber: 17,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Body, {
@@ -46336,20 +46326,20 @@ const MovieCard = ({ movie  })=>{
                                 children: movie.title
                             }, void 0, false, {
                                 fileName: "src/components/MovieCard/MovieCard.jsx",
-                                lineNumber: 12,
+                                lineNumber: 19,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {
                                 children: movie.director
                             }, void 0, false, {
                                 fileName: "src/components/MovieCard/MovieCard.jsx",
-                                lineNumber: 15,
+                                lineNumber: 22,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/MovieCard/MovieCard.jsx",
-                        lineNumber: 11,
+                        lineNumber: 18,
                         columnNumber: 11
                     }, undefined)
                 ]
@@ -46537,151 +46527,162 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
         alert("Movie added to favorites");
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                    onClick: handleAddToFavorites,
-                    variant: "info",
-                    children: "Add to favorites"
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                onClick: handleAddToFavorites,
+                variant: "info",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                    class: "fa-regular fa-bookmark"
                 }, void 0, false, {
                     fileName: "src/components/MovieView/MovieView.jsx",
                     lineNumber: 15,
                     columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    md: 7,
-                    className: "d-flex flex-column justify-content-center align-items-center",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                children: movie.title
-                            }, void 0, false, {
-                                fileName: "src/components/MovieView/MovieView.jsx",
-                                lineNumber: 23,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/MovieView/MovieView.jsx",
-                            lineNumber: 22,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "Director: "
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/MovieView/MovieView.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                to: "/movies",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                    children: "Back to Home"
+                }, void 0, false, {
+                    fileName: "src/components/MovieView/MovieView.jsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/MovieView/MovieView.jsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                style: {
+                    color: "white"
+                },
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                        md: 6,
+                        className: "d-flex flex-column justify-content-center align-items-center",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    children: movie.title
                                 }, void 0, false, {
                                     fileName: "src/components/MovieView/MovieView.jsx",
                                     lineNumber: 26,
                                     columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: movie.director
-                                }, void 0, false, {
-                                    fileName: "src/components/MovieView/MovieView.jsx",
-                                    lineNumber: 27,
-                                    columnNumber: 13
                                 }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/MovieView/MovieView.jsx",
-                            lineNumber: 25,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "Genre: "
-                                }, void 0, false, {
-                                    fileName: "src/components/MovieView/MovieView.jsx",
-                                    lineNumber: 30,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: movie.genre
-                                }, void 0, false, {
-                                    fileName: "src/components/MovieView/MovieView.jsx",
-                                    lineNumber: 31,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/MovieView/MovieView.jsx",
-                            lineNumber: 29,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "Description: "
-                                }, void 0, false, {
-                                    fileName: "src/components/MovieView/MovieView.jsx",
-                                    lineNumber: 34,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: movie.description
-                                }, void 0, false, {
-                                    fileName: "src/components/MovieView/MovieView.jsx",
-                                    lineNumber: 35,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/MovieView/MovieView.jsx",
-                            lineNumber: 33,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/components/MovieView/MovieView.jsx",
-                            lineNumber: 37,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/components/MovieView/MovieView.jsx",
-                            lineNumber: 38,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/movies",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                                children: "Back to Home"
                             }, void 0, false, {
                                 fileName: "src/components/MovieView/MovieView.jsx",
+                                lineNumber: 25,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: "Director: "
+                                    }, void 0, false, {
+                                        fileName: "src/components/MovieView/MovieView.jsx",
+                                        lineNumber: 29,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: movie.director
+                                    }, void 0, false, {
+                                        fileName: "src/components/MovieView/MovieView.jsx",
+                                        lineNumber: 30,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/MovieView/MovieView.jsx",
+                                lineNumber: 28,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: "Genre: "
+                                    }, void 0, false, {
+                                        fileName: "src/components/MovieView/MovieView.jsx",
+                                        lineNumber: 33,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: movie.genre
+                                    }, void 0, false, {
+                                        fileName: "src/components/MovieView/MovieView.jsx",
+                                        lineNumber: 34,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/MovieView/MovieView.jsx",
+                                lineNumber: 32,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: "Description: "
+                                    }, void 0, false, {
+                                        fileName: "src/components/MovieView/MovieView.jsx",
+                                        lineNumber: 37,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: movie.description
+                                    }, void 0, false, {
+                                        fileName: "src/components/MovieView/MovieView.jsx",
+                                        lineNumber: 38,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/MovieView/MovieView.jsx",
+                                lineNumber: 36,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/MovieView/MovieView.jsx",
                                 lineNumber: 40,
-                                columnNumber: 13
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/MovieView/MovieView.jsx",
+                                lineNumber: 41,
+                                columnNumber: 11
                             }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MovieView/MovieView.jsx",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                        md: 5,
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
+                            src: movie.image
                         }, void 0, false, {
                             fileName: "src/components/MovieView/MovieView.jsx",
-                            lineNumber: 39,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/MovieView/MovieView.jsx",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    md: 5,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
-                        src: movie.image
                     }, void 0, false, {
                         fileName: "src/components/MovieView/MovieView.jsx",
-                        lineNumber: 44,
-                        columnNumber: 11
+                        lineNumber: 43,
+                        columnNumber: 9
                     }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/MovieView/MovieView.jsx",
-                    lineNumber: 43,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/MovieView/MovieView.jsx",
-            lineNumber: 14,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false);
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MovieView/MovieView.jsx",
+                lineNumber: 20,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
 };
 _c = MovieView;
 MovieView.propTypes = {
@@ -49862,8 +49863,8 @@ exports.constants = {
 };
 
 },{"a849114119b5eed5":"8hjhE","2cf09ec50d582308":"2WyL8","11b367a9dde9d751":"k1utz","30593fa005541bfe":"busIB","b0e143f380929027":"g38Hg","fffb63f4c8452e92":"d4idn","50d62f8ee8af92da":"hwD3y","63d2d584992338b8":"jbRNy","97e0f970f061b2c5":"9Rcg1","95e993c2393d770d":"h9Rdh","50fefa9068d65d0a":"k3tsT"}],"8hjhE":[function(require,module,exports) {
-var process = require("6c31f8eb912976f1");
 var global = arguments[3];
+var process = require("6c31f8eb912976f1");
 "use strict";
 // limit of Crypto.getRandomValues()
 // https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues
@@ -85141,8 +85142,8 @@ function compare(a, b) {
 }
 
 },{"1dca65021ea340a4":"4Szbv","ed10bf3cb1e1be70":"e2JgG","bc52db97d95e2551":"iaxu0","9f816c532187294d":"3pDum","cf39efd3c2fe3490":"e594P","89ad43d76d56f4a6":"2WyL8","fa4a341bf0c6a39":"fFkPV","9e73586265daea11":"eW7r9"}],"k3tsT":[function(require,module,exports) {
-var global = arguments[3];
 var process = require("77e31ca60c2aa84c");
+var global = arguments[3];
 "use strict";
 function oldBrowser() {
     throw new Error("secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11");
