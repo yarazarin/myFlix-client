@@ -11,12 +11,15 @@ const MovieView = ({ movie, addMovieToFavorites }) => {
 
   return (
     <>
-      <Row>
-        <Button onClick={handleAddToFavorites} variant="info">
-          Add to favorites
-        </Button>
+      <Button onClick={handleAddToFavorites} variant="info">
+        <i class="fa-regular fa-bookmark"></i>
+      </Button>
+      <Link to="/movies">
+        <Button>Back to Home</Button>
+      </Link>
+      <Row style={{ color: "white" }}>
         <Col
-          md={7}
+          md={6}
           className="d-flex flex-column justify-content-center align-items-center"
         >
           <div>
@@ -36,9 +39,6 @@ const MovieView = ({ movie, addMovieToFavorites }) => {
           </div>
           <br />
           <br />
-          <Link to="/movies">
-            <Button>Back to Home</Button>
-          </Link>
         </Col>
         <Col md={5}>
           <Image src={movie.image} />

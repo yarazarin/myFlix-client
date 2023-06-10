@@ -1,12 +1,12 @@
 import { createRoot } from "react-dom/client";
 import { Container } from "react-bootstrap";
 import "./index.scss";
-import MainView from "./components/MainView/MainView";
+import App from "./components/App/App";
 
 const MyFlixApplication = () => {
   return (
     <Container>
-      <MainView/>
+      <App />
     </Container>
   );
 };
