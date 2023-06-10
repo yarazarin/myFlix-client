@@ -1,4 +1,3 @@
-import Fotter from "./Footer.css";
 const Footer = () => {
   return (
     <>

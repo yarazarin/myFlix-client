@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { Container } from "react-bootstrap";
-import "./index.scss";
+import "./index.css";
 import App from "./components/App/App";
 
 const MyFlixApplication = () => {
