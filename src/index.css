@@ -72,3 +72,28 @@ button {
     transform: translateY(50px);
   }
 }
+.search-container{
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  align-items: center;
+
+}
+.search-movies {
+  position: absolute;
+  min-width: 30%;
+  max-width: 50%;
+}
+
+.list-group {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-top: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
