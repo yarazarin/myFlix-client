@@ -16,7 +16,7 @@ import { Col, Container } from "react-bootstrap";
 import NavBar from "../NavBar/NavBar";
 import { ProfileView } from "../ProfileView/ProfileView";
 import { p } from "../../img/p.png";
-import Footer from "../Fotter/Footer";
+import Footer from "../Footer/Footer";
 import Home from "../Home/Home";
 
 export default MainView = () => {
