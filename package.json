@@ -17,10 +17,7 @@
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.3",
     "cors": "^2.8.5",
-<<<<<<< HEAD
-=======
     "parcel": "^2.9.2",
->>>>>>> c79e5696f972fa986a8558e5ab2d7173857d5d10
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
