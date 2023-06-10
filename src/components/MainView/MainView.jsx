@@ -18,6 +18,8 @@ import { ProfileView } from "../ProfileView/ProfileView";
 import { p } from "../../img/p.png";
 import Footer from "../Footer/Footer";
 import Home from "../Home/Home";
+import SearchMovies from "../SearchMovies/SearchMovies";
+
 
 export default MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -171,7 +173,8 @@ export default MainView = () => {
                     fluid
                     className="d-flex justify-content-between align-items-center mb-4 mt-0"
                   >
-                    <p className="display-6">Movies</p>
+                    {/* <p className="display-6">Movies</p> */}
+                    <SearchMovies movies={viewMovies} />
                   </Container>
 
                   {viewMovies.length === 0 ? (

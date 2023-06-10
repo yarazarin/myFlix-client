@@ -11,6 +11,7 @@ const MovieView = ({ movie, addMovieToFavorites }) => {
 
   return (
     <>
+      <div></div>
       <Button onClick={handleAddToFavorites} variant="info">
         <i class="fa-regular fa-bookmark"></i>
       </Button>

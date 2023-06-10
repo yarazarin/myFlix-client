@@ -46943,6 +46943,11 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "src/components/MovieView/MovieView.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
                 onClick: handleAddToFavorites,
                 variant: "info",
@@ -46950,12 +46955,12 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
                     class: "fa-regular fa-bookmark"
                 }, void 0, false, {
                     fileName: "src/components/MovieView/MovieView.jsx",
-                    lineNumber: 15,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/MovieView/MovieView.jsx",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -46964,12 +46969,12 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
                     children: "Back to Home"
                 }, void 0, false, {
                     fileName: "src/components/MovieView/MovieView.jsx",
-                    lineNumber: 18,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/MovieView/MovieView.jsx",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
@@ -46986,12 +46991,12 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
                                     children: movie.title
                                 }, void 0, false, {
                                     fileName: "src/components/MovieView/MovieView.jsx",
-                                    lineNumber: 26,
+                                    lineNumber: 27,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/MovieView/MovieView.jsx",
-                                lineNumber: 25,
+                                lineNumber: 26,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -47000,20 +47005,20 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
                                         children: "Director: "
                                     }, void 0, false, {
                                         fileName: "src/components/MovieView/MovieView.jsx",
-                                        lineNumber: 29,
+                                        lineNumber: 30,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                         children: movie.director
                                     }, void 0, false, {
                                         fileName: "src/components/MovieView/MovieView.jsx",
-                                        lineNumber: 30,
+                                        lineNumber: 31,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/MovieView/MovieView.jsx",
-                                lineNumber: 28,
+                                lineNumber: 29,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -47022,20 +47027,20 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
                                         children: "Genre: "
                                     }, void 0, false, {
                                         fileName: "src/components/MovieView/MovieView.jsx",
-                                        lineNumber: 33,
+                                        lineNumber: 34,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                         children: movie.genre
                                     }, void 0, false, {
                                         fileName: "src/components/MovieView/MovieView.jsx",
-                                        lineNumber: 34,
+                                        lineNumber: 35,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/MovieView/MovieView.jsx",
-                                lineNumber: 32,
+                                lineNumber: 33,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -47044,36 +47049,36 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
                                         children: "Description: "
                                     }, void 0, false, {
                                         fileName: "src/components/MovieView/MovieView.jsx",
-                                        lineNumber: 37,
+                                        lineNumber: 38,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                         children: movie.description
                                     }, void 0, false, {
                                         fileName: "src/components/MovieView/MovieView.jsx",
-                                        lineNumber: 38,
+                                        lineNumber: 39,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/MovieView/MovieView.jsx",
-                                lineNumber: 36,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "src/components/MovieView/MovieView.jsx",
-                                lineNumber: 40,
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/MovieView/MovieView.jsx",
                                 lineNumber: 41,
                                 columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/MovieView/MovieView.jsx",
+                                lineNumber: 42,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/MovieView/MovieView.jsx",
-                        lineNumber: 21,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -47082,18 +47087,18 @@ const MovieView = ({ movie , addMovieToFavorites  })=>{
                             src: movie.image
                         }, void 0, false, {
                             fileName: "src/components/MovieView/MovieView.jsx",
-                            lineNumber: 44,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/MovieView/MovieView.jsx",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/MovieView/MovieView.jsx",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined)
         ]
@@ -50099,8 +50104,8 @@ exports.constants = {
 };
 
 },{"a849114119b5eed5":"8hjhE","2cf09ec50d582308":"2WyL8","11b367a9dde9d751":"k1utz","30593fa005541bfe":"busIB","b0e143f380929027":"g38Hg","fffb63f4c8452e92":"d4idn","50d62f8ee8af92da":"hwD3y","63d2d584992338b8":"jbRNy","97e0f970f061b2c5":"9Rcg1","95e993c2393d770d":"h9Rdh","50fefa9068d65d0a":"k3tsT"}],"8hjhE":[function(require,module,exports) {
-var global = arguments[3];
 var process = require("6c31f8eb912976f1");
+var global = arguments[3];
 "use strict";
 // limit of Crypto.getRandomValues()
 // https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues
@@ -51864,8 +51869,8 @@ exports.pipeline = require("82715fc9bf520b56");
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
-var process = require("9556eb94f3573d32");
 var global = arguments[3];
+var process = require("9556eb94f3573d32");
 "use strict";
 module.exports = Readable;
 /*<replacement>*/ var Duplex;
@@ -53702,8 +53707,8 @@ Object.defineProperty(Duplex.prototype, "destroyed", {
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
 // the drain event emission and buffering.
-var process = require("2a23a5cdb5afa9bf");
 var global = arguments[3];
+var process = require("2a23a5cdb5afa9bf");
 "use strict";
 module.exports = Writable;
 /* <replacement> */ function WriteReq(chunk, encoding, cb) {
@@ -56801,8 +56806,8 @@ module.exports = function(iterations, keylen) {
 };
 
 },{}],"T9r9Q":[function(require,module,exports) {
-var global = arguments[3];
 var process = require("a6cbaf13ba6e669a");
+var global = arguments[3];
 var defaultEncoding;
 /* istanbul ignore next */ if (global.process && global.process.browser) defaultEncoding = "utf-8";
 else if (global.process && global.process.version) {
@@ -85378,8 +85383,8 @@ function compare(a, b) {
 }
 
 },{"1dca65021ea340a4":"4Szbv","ed10bf3cb1e1be70":"e2JgG","bc52db97d95e2551":"iaxu0","9f816c532187294d":"3pDum","cf39efd3c2fe3490":"e594P","89ad43d76d56f4a6":"2WyL8","fa4a341bf0c6a39":"fFkPV","9e73586265daea11":"eW7r9"}],"k3tsT":[function(require,module,exports) {
-var process = require("77e31ca60c2aa84c");
 var global = arguments[3];
+var process = require("77e31ca60c2aa84c");
 "use strict";
 function oldBrowser() {
     throw new Error("secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11");
