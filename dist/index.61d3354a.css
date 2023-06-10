@@ -36,10 +36,11 @@ button {
 }
 
 .footer {
-  background: linear-gradient(to top, #000, #000 5a, #fff 0);
   width: 100%;
   height: 50px;
   color: #fff;
+  opacity: .75;
+  background: linear-gradient(to top, #000, #002a4d8f, #0000);
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;

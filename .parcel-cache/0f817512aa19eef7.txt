@@ -34,7 +34,7 @@
 116C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\utility-types\dist\mapped-types.js133308861064871551 0
 119C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@restart\hooks\esm\useCustomEffect.js133308859260266039 0
 131C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-solid-svg-icons\faMicroscope.js133308859285104075 0
-73C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist133308931918778752 1
+73C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist133308970401440579 1
 120C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\react-bootstrap\esm\ThemeProvider.d.ts133308859278332100 0
 115C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\react-bootstrap\cjs\Collapse.d.ts133308859275570459 0
 93C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\randombytes133308859257905120 1
@@ -157,7 +157,7 @@
 112C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\which-typed-array\CHANGELOG.md133308859258165135 0
 134C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@popperjs\core\lib\dom-utils\getDocumentRect.js.flow133308859266211433 0
 112C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\dom-helpers\esm\nextUntil.d.ts133308859270749990 0
-82C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\src\index.css133308930959107519 0
+82C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\src\index.css133308970401146953 0
 122C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\caniuse-lite\data\features\websockets.js133308861091704037 0
 90C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\has-flag133308861064486298 1
 114C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\uncontrollable\lib\cjs\hook.d.ts133308859262519283 0
@@ -336,7 +336,7 @@
 124C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-solid-svg-icons\faInr.js133308859282922732 0
 129C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@popperjs\core\lib\dom-utils\getWindowScroll.js133308859267161396 0
 89C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@mapbox133308859245306552 1
-105C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\src\components\MainView\MainView.jsx133308869983318295 0
+105C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\src\components\MainView\MainView.jsx133308941632058807 0
 127C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@parcel\core\test\fixtures\library-scopehoist133308861081178696 1
 101C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\pbkdf2\package.json133308859258896807 0
 92C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\fill-range133308861063776561 1
@@ -1177,7 +1177,7 @@
 140C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-regular-svg-icons\faFaceGrinBeamSweat.js133308859265241421 0
 128C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-solid-svg-icons\faTrailer.js133308859293195313 0
 114C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\electron-to-chromium\versions.js133308861066316826 0
-84C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.html133308931915938749 0
+84C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.html133308966719832436 0
 109C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\react-icons\gr\package.json133308859277723104 0
 157C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@parcel\transformer-sass\node_modules\@parcel\cache\lib\IDBCache.browser.js133308868735613475 0
 96C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\ordered-binary133308861067524701 1
@@ -1681,7 +1681,7 @@
 114C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\react-bootstrap\esm\ModalBody.js133308859267481419 0
 122C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-solid-svg-icons\fa7.js133308859258365150 0
 128C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-solid-svg-icons\faAward.d.ts133308859296824779 0
-88C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\p.66b9d9bb.png133308931915968796 0
+88C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\p.66b9d9bb.png133308966719842419 0
 131C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-solid-svg-icons\faAlignRight.js133308859262041439 0
 99C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\warning\README.md133308859255905120 0
 104C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\minimatch\minimatch.js133308859254905122 0
@@ -3671,7 +3671,7 @@
 116C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\react-bootstrap\Modal\package.json133308859273137210 0
 135C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\caniuse-lite\data\features\comparedocumentposition.js133308861078072010 0
 119C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@lmdb\lmdb-win32-x64\node.abi108.node133308861067062303 0
-93C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\myFlix.09276cda.png133308931917158750 0
+93C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\myFlix.09276cda.png133308966722147327 0
 124C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\react-bootstrap\ListGroupItem\package.json133308859273097219 0
 120C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\react-bootstrap\ListGroup\package.json133308859273077142 0
 125C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@babel\runtime\helpers\esm\asyncIterator.js133308859264851373 0
@@ -8362,7 +8362,7 @@
 115C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@popperjs\core\lib\popper-lite.js133308859261501088 0
 120C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@popperjs\core\lib\popper-lite.js.flow133308859261612572 0
 112C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@popperjs\core\lib\popper.d.ts133308859261858902 0
-95C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.b4b6dfad.js.map133308931918768841 0
+95C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.b4b6dfad.js.map133308966722807323 0
 110C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@popperjs\core\lib\popper.js133308859262011447 0
 115C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@popperjs\core\lib\popper.js.flow133308859262142753 0
 111C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@popperjs\core\lib\types.d.ts133308859262380990 0
@@ -12116,7 +12116,7 @@
 139C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-regular-svg-icons\faSquareCaretRight.js133308859270490144 0
 138C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-regular-svg-icons\faSquareCaretUp.d.ts133308859274970422 0
 136C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-regular-svg-icons\faSquareCaretUp.js133308859270510237 0
-96C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.61d3354a.css.map133308931915998793 0
+96C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.61d3354a.css.map133308970401426936 0
 136C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-regular-svg-icons\faSquareCheck.d.ts133308859274980414 0
 135C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-regular-svg-icons\faSquarePlus.d.ts133308859275020416 0
 133C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\@fortawesome\free-regular-svg-icons\faSquarePlus.js133308859270600146 0
@@ -12285,5 +12285,5 @@
 97C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\.bin\semver.ps1133308859313770216 0
 93C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\.bin\sha.js133308859313780215 0
 113C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\node_modules\.bin\update-browserslist-db.cmd133308861093014900 0
-92C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.61d3354a.css133308931915938749 0
-91C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.b4b6dfad.js133308931918618774 0
+92C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.61d3354a.css133308970401416936 0
+91C:\Users\uraee\Desktop\OneDrive\(CF-WORKS)\TASKS\React\myFlix-client\dist\index.b4b6dfad.js133308966722637534 0

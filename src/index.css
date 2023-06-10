@@ -33,7 +33,7 @@ button {
   height: 100px;
 }
 .footer {
-  background: linear-gradient(to top, #000, #000 5a, #fff 0);
+  background: linear-gradient(to top, #000000,rgba(0, 42, 77, 0.562), transparent);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -44,6 +44,7 @@ button {
   align-items: center;
   color: white;
   font-size: 1.2rem;
+  opacity: 0.75;
 }
 .Home {
   height: 50vh;
