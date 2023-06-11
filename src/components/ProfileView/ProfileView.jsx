@@ -10,7 +10,6 @@ export const ProfileView = ({
 }) => {
   const [favoriteMovies, setFavoriteMovies] = useState([]);
   const [updatedUser, setUpdatedUser] = useState(user);
-  const [usernameExists, setUsernameExists] = useState(false);
   useEffect(() => {
     setUpdatedUser(user);
   }, [user]);
@@ -29,62 +28,33 @@ export const ProfileView = ({
         setFavoriteMovies(favoriteMovies);
       });
   }, [user, token]);
-
-  const checkUsernameExists = async (username) => {
-    const response = await fetch(
-      `https://evening-inlet-09970.herokuapp.com/users/${username}`
-    );
-    return response.status === 200;
-  };
-
   const handleUpdate = async (e) => {
     e.preventDefault();
-    setUsernameExists(false);
-
-    if (updatedUser.Username !== user.Username) {
-      const exists = await checkUsernameExists(updatedUser.Username);
-      if (exists) {
-        alert("The username already exists. Please choose another one.");
-        return;
-      }
-    }
-
     const salt = await bcryptjs.genSalt(10);
     const hashedPassword = await bcryptjs.hash(updatedUser.Password, salt);
 
-    try {
-      const response = await fetch(
-        `https://evening-inlet-09970.herokuapp.com/users/${user.Username}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            Username: updatedUser.Username,
-            Password: hashedPassword,
-            Email: updatedUser.Email,
-            Birthday: updatedUser.Birthday,
-          }),
-        }
-      );
-
-      const data = await response.json();
-
-      if (response.status === 200) {
-        if (data.Username !== user.Username) {
-          setUser(data);
-        }
+    fetch(`https://evening-inlet-09970.herokuapp.com/users/${user.Username}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        Username: updatedUser.Username,
+        Password: hashedPassword,
+        Email: updatedUser.Email,
+        Birthday: updatedUser.Birthday,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUser(data);
         alert("Your information has been saved successfully!");
-      } else {
-        throw new Error(data.message);
-      }
-    } catch (error) {
-      console.log(error);
-    }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-
   const handleDeregister = (e) => {
     e.preventDefault();
     if (window.confirm("Are you sure you want to delete your account?")) {
