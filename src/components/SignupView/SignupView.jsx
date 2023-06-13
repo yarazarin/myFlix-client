@@ -28,7 +28,7 @@ export const SignupView = () => {
     }).then((response) => {
       if (response.ok) {
         alert("Signup successful");
-        window.location.replace('/login');
+        window.location.replace("/login");
       } else {
         alert("try with another username, or check your inFormation again");
       }
@@ -84,7 +84,7 @@ export const SignupView = () => {
       </Button>
       <br />
       <br />
-      <Link to="/">Already have an account?</Link>
+      <Link to="/login">Already have an account?</Link>
     </Form>
   );
 };
