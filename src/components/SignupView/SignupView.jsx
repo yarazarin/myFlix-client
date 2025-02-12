@@ -19,7 +19,7 @@ export const SignupView = () => {
       Birthday: birthday,
     };
 
-    fetch("https://mern-blog-server-9l5p.onrender.com/users", {
+    fetch("https://movie-api-cq59.onrender.com/users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

@@ -16,7 +16,7 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password,
     };
 
-    fetch("https://mern-blog-server-9l5p.onrender.com/login", {
+    fetch("https://movie-api-cq59.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

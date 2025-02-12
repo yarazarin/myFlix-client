@@ -43,7 +43,7 @@ const App = () => {
 
   const addMovieToFavorites = (movieId) => {
     fetch(
-      `https://mern-blog-server-9l5p.onrender.com/users/${user.Username}/movies/${movieId}`,
+      `https://movie-api-cq59.onrender.com/users/${user.Username}/movies/${movieId}`,
       {
         method: "POST",
         headers: {
@@ -65,7 +65,7 @@ const App = () => {
     if (!token) {
       return;
     }
-    fetch("https://mern-blog-server-9l5p.onrender.com/movies", {
+    fetch("https://movie-api-cq59.onrender.com/movies", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => response.json())
@@ -87,7 +87,7 @@ const App = () => {
 
   const removeMovieFromFavorites = (movieId) => {
     fetch(
-      `https://mern-blog-server-9l5p.onrender.com/users/${user.Username}/movies/${movieId}`,
+      `https://movie-api-cq59.onrender.com/users/${user.Username}/movies/${movieId}`,
       {
         method: "DELETE",
         headers: {
