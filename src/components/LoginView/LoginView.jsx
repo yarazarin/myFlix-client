@@ -16,7 +16,7 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password,
     };
 
-    fetch("https://evening-inlet-09970.herokuapp.com/login", {
+    fetch("https://mern-blog-server-9l5p.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

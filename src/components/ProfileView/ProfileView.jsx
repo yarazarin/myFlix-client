@@ -17,7 +17,7 @@ export const ProfileView = ({
     if (!user || !token) {
       return;
     }
-    fetch("https://evening-inlet-09970.herokuapp.com/movies", {
+    fetch("https://mern-blog-server-9l5p.onrender.com/movies", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => response.json())
@@ -33,7 +33,7 @@ export const ProfileView = ({
     const salt = await bcryptjs.genSalt(10);
     const hashedPassword = await bcryptjs.hash(updatedUser.Password, salt);
 
-    fetch(`https://evening-inlet-09970.herokuapp.com/users/${user.Username}`, {
+    fetch(`https://mern-blog-server-9l5p.onrender.com/users/${user.Username}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -59,7 +59,7 @@ export const ProfileView = ({
     e.preventDefault();
     if (window.confirm("Are you sure you want to delete your account?")) {
       fetch(
-        `https://evening-inlet-09970.herokuapp.com/users/${user.Username}`,
+        `https://mern-blog-server-9l5p.onrender.com/users/${user.Username}`,
         {
           method: "DELETE",
           headers: {

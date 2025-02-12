@@ -19,7 +19,7 @@ export const SignupView = () => {
       Birthday: birthday,
     };
 
-    fetch("https://evening-inlet-09970.herokuapp.com/users", {
+    fetch("https://mern-blog-server-9l5p.onrender.com/users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
