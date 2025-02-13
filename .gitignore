@@ -10,8 +10,8 @@ node_modules/
 
 # Parcel files
 .cache/
+.parcel-cache
 .parcel-cache/
-dist/
 
 # Environment variables
 .env
