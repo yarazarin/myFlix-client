@@ -14,9 +14,10 @@ const MovieCard = ({ movie }) => {
             textAlign: "center",
             justifyContent: "center",
             alignItems: "center",
+            minHeight: "350px",
           }}
         >
-          <Card.Img src={movie.image} />
+          <Card.Img className="movie_card_images" src={movie.image} />
           <Card.Body>
             <Card.Title style={{ fontSize: "1.2rem" }}>
               {movie.title}
