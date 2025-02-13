@@ -1,0 +1,16 @@
+/* MovieCard.css */
+.movie_card_images {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+.movie_card_images:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .5);
+}
